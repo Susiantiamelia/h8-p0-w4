@@ -8,12 +8,15 @@ function changeVocals (str) {
     var index2 = dictUpper.indexOf(str[a])
     
     if(index !== -1){
+
       if(index !== dictLower.length-1){
 	      hasil = hasil + dictLower[index+1]
       } else {
         hasil = hasil + str[a]
       }
+
     } else if(index2 !== -1){
+
       if(index2 !== dictUpper.length-1){
         hasil = hasil + dictUpper[index2+1]
       } else { 
@@ -22,6 +25,7 @@ function changeVocals (str) {
     } else {
       hasil = hasil + str[a]
     }
+    
 	}
 
 	return hasil;

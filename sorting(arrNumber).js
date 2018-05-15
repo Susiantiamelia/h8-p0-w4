@@ -2,14 +2,14 @@ function sorting(arrNumber) {
 
   for(var c=0; c < arrNumber.length; c++){
 
-  for(var d=0; d < arrNumber.length; d++){
-    if(arrNumber[c] > arrNumber[d]){
-      var temp = arrNumber[d]
-      arrNumber[d] = arrNumber[c]
-      arrNumber[c] = temp
+    for(var d=0; d < arrNumber.length; d++){
+      if(arrNumber[c] > arrNumber[d]){
+        var temp = arrNumber[d]
+        arrNumber[d] = arrNumber[c]
+        arrNumber[c] = temp
+      }
     }
   }
-}
 
   return arrNumber;
 }

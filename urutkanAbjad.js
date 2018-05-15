@@ -1,5 +1,4 @@
 function urutkanAbjad(str) {
-  var dict = 'abcdefghijklmnopqrstuvwxyz'
   var arr = []
   var hasil = ''
 
@@ -8,22 +7,22 @@ function urutkanAbjad(str) {
   }
 
   for(var c=0; c < arr.length; c++){
-    var index = dict.indexOf(arr[c])
-    
+ 
     for(var d=0; d < arr.length; d++){
-      var index2 = dict.indexOf(arr[d])
-      if(index < index2){
-        var temp = arr[d]
-        arr[d] = arr[c]
-        arr[c] = temp
+      
+      if(arr[c] < arr[d]){
+        var temp = arr[c]
+        arr[c] = arr[d]
+        arr[d] = temp
       }
     }
-}
+  }
+  
 
-for(var b=0; b < arr.length; b++){
-  hasil = hasil + arr[b]
-}
-return hasil;
+  for(var b=0; b < arr.length; b++){
+    hasil = hasil + arr[b]
+  }
+  return hasil;
 }
 
 // TEST CASES

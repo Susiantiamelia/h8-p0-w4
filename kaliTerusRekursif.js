@@ -1,11 +1,11 @@
 function kaliTerusRekursif(angka) {
-  var ubah = String(angka)
+  var angkaString = String(angka)
   var hitung = 1
-  if(ubah.length === 1){
-    return Number(ubah)
+  if(angkaString.length === 1){
+    return Number(angkaString)
   } else {
-    for(var a=0; a < ubah.length; a++){
-      hitung = hitung * Number(ubah[a])
+    for(var a=0; a < angkaString.length; a++){
+      hitung = hitung * Number(angkaString[a])
     }
     
     return kaliTerusRekursif(hitung)
